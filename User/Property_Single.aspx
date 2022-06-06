@@ -1,0 +1,447 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Property_Single.aspx.cs" Inherits="Buyer_Property_Single" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Solivagent : Tour Guide</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: EstateAgency
+    Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+
+    <style type="text/css">      
+        .ratingStar  
+        {  
+            font-size: 2pt;  
+            width: 20px;  
+            height: 20px;            
+            cursor: pointer;  
+            display: block;  
+            background-repeat: no-repeat;  
+        }  
+        .filledStar  
+        {  
+            background-image: url(img/Filled_Star.png);  
+        }  
+        .emptyStar  
+        {  
+            background-image: url(img/Empty_Star.png);  
+        }  
+        .savedStar  
+        {  
+            background-image: url(img/Saved_Star.png);  
+        }  
+        .auto-style1 {  
+            height: 80px;  
+        }  
+    </style>  
+</head>
+
+<body>
+
+  
+
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="navbar-brand text-brand" href="index.html">Solivagent : Tour Guide<span class="color-b"></span></a>
+      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+        data-target="#navbarTogglerDemo01" aria-expanded="false">
+        <span class="fa fa-search" aria-hidden="true"></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " href="Home.aspx">Home</a>
+          </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="https://flight-fare-predictor-0.herokuapp.com">Airline</a>
+              </li>
+           <li class="nav-item">
+            <a class="nav-link" href="Tours.aspx">View Tours</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          
+         <%-- <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>--%>
+              <li class="nav-item">
+            <a class="nav-link" href="logout.aspx">Logout</a>
+          </li>
+        </ul>
+      </div>
+    
+  
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Intro Single star /-->
+  <section class="intro-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <div class="title-single-box">
+            <h1 class="title-single"><%=_name%></h1>
+            <span class="color-text-a"><%=_addr%></span>
+              
+          </div>
+            
+        </div>
+        <div class="col-md-12 col-lg-4">
+          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+            <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+                <asp:HyperLink ID="HyperLink1" runat="server"  Text="Download Discription"   Font-Bold="True" ForeColor="#009900"></asp:HyperLink>
+              </li>
+              
+                
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Intro Single End /-->
+
+  <!--/ Property Single Star /-->
+    <form id="form1" runat="server">
+  <section class="property-single nav-arrow-b">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
+            <div class="carousel-item-b">
+              <img src="<%=_image%>" alt="" height="700">
+            </div>
+            <div class="carousel-item-b">
+              <img src="<%=_image%>" alt="" height="700">
+            </div>
+            <div class="carousel-item-b">
+              <img src="<%=_image%>" alt="" height="700">
+            </div>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-md-5 col-lg-4">
+          
+            <div class="property-price d-flex justify-content-center foo">
+               
+                  <div class="card-title-c align-self-center">
+                    <h5 class="title-c">Prices: <%=_price%></h5>
+                  </div>
+                  <%--<div class="card-title-c align-self-center">
+                    <h5 class="title-c"><%=_year%></h5>
+                  </div>--%>
+
+                  
+               
+              </div>
+              <div class="property-summary">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="title-box-d section-t4">
+                        
+                      <div class="card-title-c align-self-center">
+                  <div class="table-responsive table1" style="margin-top: 5px">                             
+                    <table border="0">
+                                <thead>
+                                  <tr>
+                                   <th scope="col"><h2>User Review</h2></th>
+                                      </tr>
+              
+                                </thead>
+           
+                                <% if (flagr == true)
+                                   {
+                                       foreach (System.Data.DataRow row in dt_r.Rows)
+                                       {%>
+                                            <tbody>
+                                              <tr>
+                                                    <td><h4><%=row["name"]%></h4>
+                                                          Rate: <%=row["Ratings"] %>/5
+                                       
+                                       
+                                                        <p><%=row["Review"]%></p>
+                                                    </td>
+                                             </tr>
+                                
+                            
+                                            </tbody>
+                           
+                                     <%  }
+                      
+                       
+                                   }%>
+                                   <%  else
+                                 {%>
+                                      <%-- Response.Write("<script>alert('No Data Found')</script>");--%>
+                                   <%}%> 
+           
+                          </table>
+                    </div>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+
+
+
+                 
+
+
+
+                <div class="summary-list">
+                 
+                </div>
+              </div>
+   
+
+        </div>
+
+              <div class="col-md-7 col-lg-7 section-md-t3">
+              <div class="row">
+               
+              </div>
+              <div class="property-description">
+                <p class="description color-text-a">
+                 
+                </p>
+                <p class="description color-text-a no-margin">
+                 
+                </p>
+              </div>
+              <div class="row section-t3">
+                <div class="col-sm-12">
+                  <div class="title-box-d">
+                    <h3 >Add Ratings</h3>
+                       <asp:ScriptManager ID="ScriptManager1" runat="server">
+                  </asp:ScriptManager>
+                <asp:Rating ID="Rating1" runat="server" StarCssClass="ratingStar" WaitingStarCssClass="savedStar"  
+                        FilledStarCssClass="filledStar" EmptyStarCssClass="emptyStar" AutoPostBack="true" CurrentRating="1" MaxRating="5"  
+                        OnChanged="Rating1_Changed"></asp:Rating>
+                  </div> 
+                   
+                </div>
+
+                   <div class="col-sm-12">
+                  <div >
+                    <h3 class="title-d">Add Comments</h3>
+                      
+                  </div>
+                    <div class="amenities-list color-text-a">
+                        <textarea name="comments" class="form-control"  cols="45" rows="8" data-msg="Please write something for us" placeholder= "Please write something for us." ></textarea>
+                        </div>
+                        <asp:Button ID="Button2" runat="server" Text="Submit"  class="btn btn-a" OnClick="Button2_Click"/>                   
+                </div>
+              </div>
+              
+                
+            </div>
+          </div>
+            <div class="col-sm-12">
+          <div class="grid-option">
+              <h1 class="title-d"></h1>
+            <h3 class="title-d">Recomendations</h3>
+          </div>
+        </div>
+
+            <div class="row">
+
+             <% if (flag == true)
+                   {
+                       foreach (System.Data.DataRow row in dt2.Rows)
+                       {%>
+                            <div class="col-md-4">
+                              <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                  <img src="/Admin/img/<%=row["image"]%>" alt="" class="img-a img-fluid" >
+                                </div>
+                                <div class="card-overlay">
+                                  <div class="card-overlay-a-content">
+                                    <div class="card-header-a">
+                                      <h2 class="card-title-a">
+                                        <a href="#"><%=row["tour_name"]%>
+                                          
+                                      </h2>
+                                    </div>
+                                    <div class="card-body-a">
+                                      <div class="price-box d-flex">
+                                        <span class="price-a">  <%=row["price"]%></span>
+                                      </div>
+                                      <a href="Property_single.aspx?id=<%=row["id"]%>" class="link-a">Click here to view
+                                        <span class="ion-ios-arrow-forward"></span>
+                                      </a>
+                                    </div>
+                                    <div class="card-footer-a">
+                                      <ul class="card-info d-flex justify-content-around">
+                                        <li>
+                                          <h4 class="card-info-title">Location</h4>
+                                          <span><%=row["location"]%>
+                                          </span>
+                                        </li>
+                                        
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                     <%  }
+                      
+                       
+                               }%>
+                    <%  else
+                             {%>
+                      
+                               <%}%> 
+
+        </div>
+            </div>
+          </div>
+      
+     
+       
+       
+  </section>
+  <!--/ Property Single End /-->
+
+  <!--/ footer Star /-->
+  <section class="section-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="widget-a">
+            <div class="w-header-a">
+              <h3 class="w-title-a text-brand">Solivagent : Tour Guide</h3>
+            </div>
+            <div class="w-body-a">
+              <p class="w-text-a color-text-a">
+                 Journey ofOur Tours compiles the glorious 20 years in Tourism Industry.
+                    Journey started with a dream by our Director. He dreamt to reach to each & every corner of this World, by doing this he wanted to sell his experience to the customers. He had a different concept of doing customized/tailor made tours.
+              </p>
+            </div>
+            <div class="w-footer-a">
+              <ul class="list-unstyled">
+                <li class="color-a">
+                  <span class="color-text-a">Phone .</span> contact@example.com</li>
+                <li class="color-a">
+                  <span class="color-text-a">Email .</span> +54 356 945234</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <%--<div class="col-sm-12 col-md-4 section-md-t3">
+         
+        </div>--%>
+        <div class="col-sm-12 col-md-4 section-md-t3">
+          <div class="widget-a">
+            <div class="w-header-a">
+              <h3 class="w-title-a text-brand">International sites</h3>
+            </div>
+            <div class="w-body-a">
+              <ul class="list-unstyled">
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Mumbai</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Delhi</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">New Mumbai</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Thane</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Chennai</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Banglore</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="nav-footer">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#">Home</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">About</a>
+              </li>
+              
+              <li class="list-inline-item">
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        
+         
+         
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ Footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/scrollreveal/scrollreveal.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+</form>
+</body>
+</html>

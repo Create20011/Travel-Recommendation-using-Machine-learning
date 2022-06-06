@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Tour_Recommend_hyperlibk", ".", "{1D93C71E-192E-42E3-BB8E-32990D88AC25}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64707"
+		Debug.AspNetCompiler.PhysicalPath = "..\Tour_Recommend\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64707\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64707"
+		Release.AspNetCompiler.PhysicalPath = "..\Tour_Recommend\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64707\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64707"
+		SlnRelativePath = "..\Tour_Recommend\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D93C71E-192E-42E3-BB8E-32990D88AC25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D93C71E-192E-42E3-BB8E-32990D88AC25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9668D34-B700-4363-BD5A-602ADB6D4DC4}
+	EndGlobalSection
+EndGlobal
